@@ -1,8 +1,8 @@
-#import "WPQNativeQuillViewController.h"
+#import "WPQTinyMCEViewController.h"
 #import "WPKeyboardToolbarBase.h"
 #import "WPQUtilities.h"
 
-@interface WPQNativeQuillViewController () <UIWebViewDelegate, WPKeyboardToolbarDelegate>
+@interface WPQTinyMCEViewController() <UIWebViewDelegate, WPKeyboardToolbarDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) WPKeyboardToolbarBase *editorToolbar;
@@ -16,14 +16,14 @@
 
 @end
 
-@implementation WPQNativeQuillViewController
+@implementation WPQTinyMCEViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [_webView setDelegate:self];
-    [MMStopwatchARC start:@"Quill Init"];
-	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"quill_native_index" ofType:@"html"]isDirectory:NO]]];
+    [MMStopwatchARC start:@"TinyMCE Init"];
+	//[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"quill_native_index" ofType:@"html"]isDirectory:NO]]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,13 +58,13 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [MMStopwatchARC stop:@"Quill Init"];
+    [MMStopwatchARC stop:@"TinyMCE Init"];
     _didFinishLoadingEditor = YES;
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    NSLog(@"load request %@",[request URL]);
+    //NSLog(@"load request %@",[request URL]);
     if([[[request URL] absoluteString] isEqualToString:@"app://api-triggered-text-change"]) {
         [MMStopwatchARC stop:@"Quill Load"];
         NSLog(@"Quill had an API triggered text change.");
@@ -80,8 +80,8 @@
     NSString *urlString = [[alertView textFieldAtIndex:0] text];
     NSLog(@"Entered: %@",urlString);
     [WPQUtilities clenseHTML:&urlString];
-    NSString *jsCommand = [NSString stringWithFormat:@"linkSelection(\"%@\")", urlString];
-    [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+//    NSString *jsCommand = [NSString stringWithFormat:@"linkSelection(\"%@\")", urlString];
+//    [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
 }
 
 #pragma mark - WPKeyboardToolbar Delegate Methods
@@ -89,39 +89,39 @@
 - (void)keyboardToolbarButtonItemPressed:(WPKeyboardToolbarButtonItem *)buttonItem {
     NSString *jsCommand;
     if ([buttonItem.actionTag isEqualToString:@"strong"]) {
-        jsCommand = @"boldSelection();";
-        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+//        jsCommand = @"boldSelection();";
+//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"em"]) {
-        jsCommand= @"italicizeSelection();";
-        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+//        jsCommand= @"italicizeSelection();";
+//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"u"]) {
-        jsCommand = @"underlineSelection();";
-        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+//        jsCommand = @"underlineSelection();";
+//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"del"]) {
-        jsCommand = @"deleteSelection();";
-        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+//        jsCommand = @"deleteSelection();";
+//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"link"]) {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Add URL" message:@"Gimme a link:" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-        UITextField * alertTextField = [alert textFieldAtIndex:0];
-        alertTextField.keyboardType = UIKeyboardTypeURL;
-        alertTextField.placeholder = @"URL";
-        [alert show];
+//        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Add URL" message:@"Gimme a link:" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+//        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+//        UITextField * alertTextField = [alert textFieldAtIndex:0];
+//        alertTextField.keyboardType = UIKeyboardTypeURL;
+//        alertTextField.placeholder = @"URL";
+//        [alert show];
     } else if ([buttonItem.actionTag isEqualToString:@"image"]) {
-        NSString *urlString = @"http://www.tomasponer.cz/wp-content/uploads/2013/05/wordpress.png";
-        [WPQUtilities clenseHTML:&urlString];
-        jsCommand = [NSString stringWithFormat:@"insertImage(\"%@\")", urlString];
-        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+//        NSString *urlString = @"http://www.tomasponer.cz/wp-content/uploads/2013/05/wordpress.png";
+//        [WPQUtilities clenseHTML:&urlString];
+//        jsCommand = [NSString stringWithFormat:@"insertImage(\"%@\")", urlString];
+//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"more"]) {
-        jsCommand= @"insertMore();";
-        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+//        jsCommand= @"insertMore();";
+//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"done"]) {
         if ([_webView isFirstResponder]) {
             [_webView resignFirstResponder];
         }
         [self.view endEditing:YES];
     } else {
-    
+        
     }
 }
 
@@ -207,5 +207,6 @@
     self.keyboardWindow = nil;
     _isShowingKeyboard = NO;
 }
+
 
 @end

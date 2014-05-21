@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7401C3D0192D2AA800A8FF5F /* WPQTinyMCEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7401C3CF192D2AA800A8FF5F /* WPQTinyMCEViewController.m */; };
 		74103D75192A916C009E04F4 /* content.html in Resources */ = {isa = PBXBuildFile; fileRef = 74103D74192A916C009E04F4 /* content.html */; };
 		741367241926A55100AD07DD /* WPKeyboardToolbarBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 741367211926A55100AD07DD /* WPKeyboardToolbarBase.m */; };
 		741367251926A55100AD07DD /* WPKeyboardToolbarBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 741367211926A55100AD07DD /* WPKeyboardToolbarBase.m */; };
@@ -39,6 +40,7 @@
 		74834B58192BA6FE0084A1F1 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 74834B57192BA6FE0084A1F1 /* GTMNSString+HTML.m */; };
 		74834B5C192BDE8C0084A1F1 /* MMStopwatchARC.m in Sources */ = {isa = PBXBuildFile; fileRef = 74834B5B192BDE8C0084A1F1 /* MMStopwatchARC.m */; };
 		74A918FA192AB090006F60AB /* WPQNativeQuillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A918F9192AB090006F60AB /* WPQNativeQuillViewController.m */; };
+		74D46F5D192D40D20033552E /* WPQUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D46F5C192D40D20033552E /* WPQUtilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7401C3CE192D2AA800A8FF5F /* WPQTinyMCEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPQTinyMCEViewController.h; sourceTree = "<group>"; };
+		7401C3CF192D2AA800A8FF5F /* WPQTinyMCEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQTinyMCEViewController.m; sourceTree = "<group>"; };
 		74103D74192A916C009E04F4 /* content.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = content.html; sourceTree = "<group>"; };
 		741367201926A55100AD07DD /* WPKeyboardToolbarBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPKeyboardToolbarBase.h; sourceTree = "<group>"; };
 		741367211926A55100AD07DD /* WPKeyboardToolbarBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPKeyboardToolbarBase.m; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		74834B5B192BDE8C0084A1F1 /* MMStopwatchARC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMStopwatchARC.m; sourceTree = "<group>"; };
 		74A918F8192AB090006F60AB /* WPQNativeQuillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPQNativeQuillViewController.h; sourceTree = "<group>"; };
 		74A918F9192AB090006F60AB /* WPQNativeQuillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQNativeQuillViewController.m; sourceTree = "<group>"; };
+		74D46F5B192D40D20033552E /* WPQUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPQUtilities.h; sourceTree = "<group>"; };
+		74D46F5C192D40D20033552E /* WPQUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQUtilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7401C3D1192D2AB200A8FF5F /* TinyMCE */ = {
+			isa = PBXGroup;
+			children = (
+				7401C3CE192D2AA800A8FF5F /* WPQTinyMCEViewController.h */,
+				7401C3CF192D2AA800A8FF5F /* WPQTinyMCEViewController.m */,
+			);
+			name = TinyMCE;
+			sourceTree = "<group>";
+		};
 		746B2A041925699B0026C671 = {
 			isa = PBXGroup;
 			children = (
@@ -155,10 +170,13 @@
 				746B2A1F1925699C0026C671 /* WPQAppDelegate.h */,
 				746B2A201925699C0026C671 /* WPQAppDelegate.m */,
 				74834B51192BA3420084A1F1 /* Content */,
+				7401C3D1192D2AB200A8FF5F /* TinyMCE */,
 				74834B52192BA4570084A1F1 /* Quill */,
 				74834B59192BA7370084A1F1 /* Categories */,
 				746B2A281925699C0026C671 /* WPQViewController.h */,
 				746B2A291925699C0026C671 /* WPQViewController.m */,
+				74D46F5B192D40D20033552E /* WPQUtilities.h */,
+				74D46F5C192D40D20033552E /* WPQUtilities.m */,
 				741367201926A55100AD07DD /* WPKeyboardToolbarBase.h */,
 				741367211926A55100AD07DD /* WPKeyboardToolbarBase.m */,
 				741367221926A55100AD07DD /* WPKeyboardToolbarButtonItem.h */,
@@ -354,12 +372,14 @@
 			files = (
 				741367241926A55100AD07DD /* WPKeyboardToolbarBase.m in Sources */,
 				746B2A1D1925699C0026C671 /* main.m in Sources */,
+				7401C3D0192D2AA800A8FF5F /* WPQTinyMCEViewController.m in Sources */,
 				74834B5C192BDE8C0084A1F1 /* MMStopwatchARC.m in Sources */,
 				74834B58192BA6FE0084A1F1 /* GTMNSString+HTML.m in Sources */,
 				74834B55192BA6590084A1F1 /* NSString+HTML.m in Sources */,
 				741367261926A55100AD07DD /* WPKeyboardToolbarButtonItem.m in Sources */,
 				7413672A1926A92900AD07DD /* WPStyleGuide.m in Sources */,
 				74A918FA192AB090006F60AB /* WPQNativeQuillViewController.m in Sources */,
+				74D46F5D192D40D20033552E /* WPQUtilities.m in Sources */,
 				746B2A2A1925699C0026C671 /* WPQViewController.m in Sources */,
 				746B2A211925699C0026C671 /* WPQAppDelegate.m in Sources */,
 			);
