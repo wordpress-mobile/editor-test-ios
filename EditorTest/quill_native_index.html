@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quill Editor Demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="editor-container">
+        Load some content here!
+    </div>
+    
+    <script type="text/javascript" src="quill.min.js"></script>
+    <script type="text/javascript">
+      var configs = {
+        logLevel: 'warn',
+        readOnly: false,
+        formats: ['bold', 'italic', 'strike', 'underline', 'link', 'image'],
+        styles: {
+            'body': {
+                'font-family': "'Arial', san-serif"
+            }
+        }
+      };
+    
+      var editor = new Quill('#editor-container', configs);
+      editor.on('text-change', function(delta, source) {
+        if (source == 'api') {
+            window.location = "app://api-triggered-text-change";
+        } else if (source == 'user') {
+            window.location = "app://user-triggered-text-change";
+        }
+      });
+    
+      var isBold = false;
+      var isItalic = false;
+      var isDeleted = false;
+      var isUnderlined = false;
+      
+      function boldSelection() {
+          var range = editor.getSelection();
+          if (range) {
+              isBold = !isBold;
+              editor.prepareFormat('bold', isBold);
+              if (range.start != range.end) {
+                  var text = editor.getText(range.start, range.end);
+                  editor.formatText(range.start, range.end, 'bold', isBold);
+              }
+          } else {
+              console.log('User cursor is not in editor');
+          }
+      };
+    
+      function italicizeSelection() {
+        var range = editor.getSelection();
+        if (range) {
+            isItalic = !isItalic;
+            editor.prepareFormat('italic', isItalic);
+            if (range.start != range.end) {
+                var text = editor.getText(range.start, range.end);
+                editor.formatText(range.start, range.end, 'italic', isItalic);
+            }
+        } else {
+            console.log('User cursor is not in editor');
+        }
+      };
+    
+      function deleteSelection() {
+        var range = editor.getSelection();
+        if (range) {
+            isDeleted = !isDeleted;
+            editor.prepareFormat('strike', isDeleted);
+            if (range.start != range.end) {
+                var text = editor.getText(range.start, range.end);
+                editor.formatText(range.start, range.end, 'strike', isDeleted);
+            }
+        } else {
+            console.log('User cursor is not in editor');
+        }
+      };
+    
+      function underlineSelection() {
+        var range = editor.getSelection();
+        if (range) {
+            isUnderlined = !isUnderlined;
+            editor.prepareFormat('underline', isUnderlined);
+            if (range.start != range.end) {
+                var text = editor.getText(range.start, range.end);
+                editor.formatText(range.start, range.end, 'underline', isUnderlined);
+            }
+        } else {
+            console.log('User cursor is not in editor');
+        }
+      };
+    
+      function linkSelection(linkURL) {
+        var range = editor.getSelection();
+        if (range) {
+            if (range.start != range.end) {
+                var text = editor.getText(range.start, range.end);
+                editor.formatText(range.start, range.end, 'link', linkURL);
+            }
+        } else {
+            console.log('User cursor is not in editor');
+        }
+      };
+    
+      function insertImage(imageURL) {
+        var range = editor.getSelection();
+        if (range) {
+            editor.insertEmbed(range.start, 'image', imageURL);
+        } else {
+            console.log('User cursor is not in editor');
+        }
+      };
+    
+      function insertMore() {
+        var range = editor.getSelection();
+        if (range) {
+          editor.insertText(range.start, '<!--more-->');
+        } else {
+          console.log('User cursor is not in editor');
+        }
+      };
+    
+      function italicizeAll() {
+        isItalic = !isItalic;
+        editor.formatText(0, editor.getLength(), 'italic', isItalic);
+      };
+    
+      function setEditorHTML(strHTML) {
+        editor.setHTML(strHTML);
+      };
+    
+      function boldAll() {
+        isBold = !isBold;
+        editor.formatText(0, editor.getLength(), 'bold', isBold);
+      };
+    
+    </script>
+  </body>
+</html>
