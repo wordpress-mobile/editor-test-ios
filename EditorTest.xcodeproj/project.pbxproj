@@ -504,8 +504,8 @@
 					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QuillTest/EditorTest-Prefix.pch";
-				INFOPLIST_FILE = "QuillTest/EditorTest-Info.plist";
+				GCC_PREFIX_HEADER = "EditorTest/EditorTest-Prefix.pch";
+				INFOPLIST_FILE = "EditorTest/EditorTest-Info.plist";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = EditorTest;
 				WRAPPER_EXTENSION = app;
@@ -522,8 +522,8 @@
 					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QuillTest/EditorTest-Prefix.pch";
-				INFOPLIST_FILE = "QuillTest/EditorTest-Info.plist";
+				GCC_PREFIX_HEADER = "EditorTest/EditorTest-Prefix.pch";
+				INFOPLIST_FILE = "EditorTest/EditorTest-Info.plist";
 				PRODUCT_NAME = EditorTest;
 				WRAPPER_EXTENSION = app;
 			};
