@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="tinymce_style.css">
+        <title>TinyMCE Editor Demo</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="tinymce/tinymce.min.js"></script>
+        <script type="text/javascript">
+            
+            tinymce.init({
+                 selector: "textarea",
+                 plugins: [],
+                 toolbar: false,
+                 statusbar: false,
+                 menubar:false
+             });
+             
+             function boldSelection() {
+                 tinymce.activeEditor.formatter.toggle('bold');
+                 window.alert("Bold Test!");
+             };
+        
+        </script>
+        <form method="post" action="somepage">
+            <textarea name="content" rows="30">I don't work at all right now. :-(</textarea>
+        </form>
+        
+        <a href='javascript:boldSelection()'>--- BOLD TEST ---</a>
+    </body>
+</html>

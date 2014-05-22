@@ -23,7 +23,7 @@
     [super viewDidLoad];
     [_webView setDelegate:self];
     [MMStopwatchARC start:@"TinyMCE Init"];
-	//[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"quill_native_index" ofType:@"html"]isDirectory:NO]]];
+	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"tinymce_native_index" ofType:@"html"]isDirectory:NO]]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,13 +64,13 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    //NSLog(@"load request %@",[request URL]);
-    if([[[request URL] absoluteString] isEqualToString:@"app://api-triggered-text-change"]) {
-        [MMStopwatchARC stop:@"Quill Load"];
-        NSLog(@"Quill had an API triggered text change.");
-        return false;
-    }
+    NSLog(@"load request %@",[request URL]);
     return true;
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"Error loading %@",[error description]);
 }
 
 #pragma mark - UIAlertView Delegate Methods
@@ -80,8 +80,8 @@
     NSString *urlString = [[alertView textFieldAtIndex:0] text];
     NSLog(@"Entered: %@",urlString);
     [WPQUtilities clenseHTML:&urlString];
-//    NSString *jsCommand = [NSString stringWithFormat:@"linkSelection(\"%@\")", urlString];
-//    [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+    NSString *jsCommand = [NSString stringWithFormat:@"linkSelection(\"%@\")", urlString];
+    [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
 }
 
 #pragma mark - WPKeyboardToolbar Delegate Methods
@@ -89,8 +89,8 @@
 - (void)keyboardToolbarButtonItemPressed:(WPKeyboardToolbarButtonItem *)buttonItem {
     NSString *jsCommand;
     if ([buttonItem.actionTag isEqualToString:@"strong"]) {
-//        jsCommand = @"boldSelection();";
-//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+        jsCommand = @"boldSelection();";
+        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"em"]) {
 //        jsCommand= @"italicizeSelection();";
 //        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
@@ -134,7 +134,7 @@
         NSString *htmlParam = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
         [WPQUtilities clenseHTML:&htmlParam];
         NSString *setEditorContentCommand = [NSString stringWithFormat:@"setEditorHTML(\"%@\")", htmlParam];
-        [MMStopwatchARC start:@"Quill Load"];
+        [MMStopwatchARC start:@"TinyMCE Load"];
         [_webView stringByEvaluatingJavaScriptFromString:setEditorContentCommand];
     }
 }
@@ -146,7 +146,7 @@
         NSString *htmlParam = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
         [WPQUtilities clenseHTML:&htmlParam];
         NSString *setEditorContentCommand = [NSString stringWithFormat:@"setEditorHTML(\"%@\")", htmlParam];
-        [MMStopwatchARC start:@"Quill Load"];
+        [MMStopwatchARC start:@"TinyMCE Load"];
         [_webView stringByEvaluatingJavaScriptFromString:setEditorContentCommand];
     }
 }
@@ -158,7 +158,7 @@
         NSString *htmlParam = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
         [WPQUtilities clenseHTML:&htmlParam];
         NSString *setEditorContentCommand = [NSString stringWithFormat:@"setEditorHTML(\"%@\")", htmlParam];
-        [MMStopwatchARC start:@"Quill Load"];
+        [MMStopwatchARC start:@"TinyMCE Load"];
         [_webView stringByEvaluatingJavaScriptFromString:setEditorContentCommand];
     }
 }
