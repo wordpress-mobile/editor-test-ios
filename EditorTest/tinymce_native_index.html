@@ -13,19 +13,18 @@
                  plugins: [],
                  toolbar: false,
                  statusbar: false,
-                 menubar:false
+                 menubar:false,
              });
              
              function boldSelection() {
                  tinymce.activeEditor.formatter.toggle('bold');
-                 window.alert("Bold Test!");
              };
         
-        </script>
-        <form method="post" action="somepage">
-            <textarea name="content" rows="30">I don't work at all right now. :-(</textarea>
-        </form>
+            function setEditorHTML(strHTML) {
+                tinymce.activeEditor.setContent(strHTML, {format: 'raw'});
+            };
         
-        <a href='javascript:boldSelection()'>--- BOLD TEST ---</a>
+        </script>
+        <textarea name="content" rows="30">Load some content here!</textarea>
     </body>
 </html>
