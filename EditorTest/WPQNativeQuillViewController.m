@@ -108,7 +108,7 @@
         alertTextField.placeholder = @"URL";
         [alert show];
     } else if ([buttonItem.actionTag isEqualToString:@"image"]) {
-        NSString *urlString = @"http://www.tomasponer.cz/wp-content/uploads/2013/05/wordpress.png";
+        NSString *urlString = @"http://freshtakeoncontent.com/wp-content/uploads/Wordpress_256.png";
         [WPQUtilities clenseHTML:&urlString];
         jsCommand = [NSString stringWithFormat:@"insertImage(\"%@\")", urlString];
         [_webView stringByEvaluatingJavaScriptFromString:jsCommand];

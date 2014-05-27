@@ -92,29 +92,29 @@
         jsCommand = @"boldSelection();";
         [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"em"]) {
-//        jsCommand= @"italicizeSelection();";
-//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+        jsCommand= @"italicizeSelection();";
+        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"u"]) {
-//        jsCommand = @"underlineSelection();";
-//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+        jsCommand = @"underlineSelection();";
+        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"del"]) {
-//        jsCommand = @"deleteSelection();";
-//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+        jsCommand = @"deleteSelection();";
+        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"link"]) {
-//        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Add URL" message:@"Gimme a link:" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
-//        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
-//        UITextField * alertTextField = [alert textFieldAtIndex:0];
-//        alertTextField.keyboardType = UIKeyboardTypeURL;
-//        alertTextField.placeholder = @"URL";
-//        [alert show];
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Add URL" message:@"Gimme a link:" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+        alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+        UITextField * alertTextField = [alert textFieldAtIndex:0];
+        alertTextField.keyboardType = UIKeyboardTypeURL;
+        alertTextField.placeholder = @"URL";
+        [alert show];
     } else if ([buttonItem.actionTag isEqualToString:@"image"]) {
-//        NSString *urlString = @"http://www.tomasponer.cz/wp-content/uploads/2013/05/wordpress.png";
-//        [WPQUtilities clenseHTML:&urlString];
-//        jsCommand = [NSString stringWithFormat:@"insertImage(\"%@\")", urlString];
-//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+        NSString *urlString = @"http://freshtakeoncontent.com/wp-content/uploads/Wordpress_256.png";
+        [WPQUtilities clenseHTML:&urlString];
+        jsCommand = [NSString stringWithFormat:@"insertImage(\"%@\")", urlString];
+        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"more"]) {
-//        jsCommand= @"insertMore();";
-//        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
+        jsCommand= @"insertMore();";
+        [_webView stringByEvaluatingJavaScriptFromString:jsCommand];
     } else if ([buttonItem.actionTag isEqualToString:@"done"]) {
         if ([_webView isFirstResponder]) {
             [_webView resignFirstResponder];

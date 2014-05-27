@@ -9,21 +9,49 @@
         <script type="text/javascript">
             
             tinymce.init({
-                 selector: "textarea",
-                 plugins: [],
-                 toolbar: false,
-                 statusbar: false,
-                 menubar:false,
-             });
+                selector: "textarea",
+                plugins: [],
+                toolbar: false,
+                statusbar: false,
+                menubar:false,
+            });
              
-             function boldSelection() {
-                 tinymce.activeEditor.formatter.toggle('bold');
-             };
-        
-            function setEditorHTML(strHTML) {
-                tinymce.activeEditor.setContent(strHTML, {format: 'raw'});
+            function boldSelection() {
+                tinymce.activeEditor.formatter.toggle('bold');
             };
         
+            function italicizeSelection() {
+                tinymce.activeEditor.formatter.toggle('italic');
+            };
+        
+            function deleteSelection() {
+                tinymce.activeEditor.formatter.toggle('strikethrough');
+            };
+        
+            function underlineSelection() {
+                tinymce.activeEditor.formatter.toggle('underline');
+            };
+        
+            function insertMore() {
+                tinymce.activeEditor.insertContent('--more--');
+            };
+        
+            function setEditorHTML(strHTML) {
+                tinymce.activeEditor.setContent(strHTML);
+            };
+
+
+        function linkSelection(linkURL) {
+            var linkText = tinymce.activeEditor.selection.getContent();
+            tinymce.activeEditor.selection.setContent(tinymce.activeEditor.dom.createHTML('a', {href: linkURL}, linkText));
+        };
+        
+        function insertImage(imageURL) {
+            var range = tinymce.activeEditor.selection.getRng();
+            var newNode = tinymce.activeEditor.getDoc().createElement("img");
+            newNode.src = imageURL;
+            range.insertNode(newNode);
+        };
         </script>
         <textarea name="content" rows="30">Load some content here!</textarea>
     </body>
