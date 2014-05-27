@@ -65,6 +65,10 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSLog(@"load request %@",[request URL]);
+    if([[[request URL] absoluteString] isEqualToString:@"app://api-triggered-text-change"]) {
+        [MMStopwatchARC stop:@"TinyMCE Load"];
+        return false;
+    }
     return true;
 }
 

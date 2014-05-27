@@ -14,6 +14,11 @@
                 toolbar: false,
                 statusbar: false,
                 menubar:false,
+                setup: function(editor) {
+                    editor.on('SaveContent', function(e) {
+                        window.location = "app://api-triggered-text-change";
+                    });
+                },
             });
              
             function boldSelection() {
@@ -38,6 +43,7 @@
         
             function setEditorHTML(strHTML) {
                 tinymce.activeEditor.setContent(strHTML);
+                tinymce.activeEditor.save();
             };
 
 

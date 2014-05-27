@@ -67,7 +67,6 @@
     NSLog(@"load request %@",[request URL]);
     if([[[request URL] absoluteString] isEqualToString:@"app://api-triggered-text-change"]) {
         [MMStopwatchARC stop:@"Quill Load"];
-        NSLog(@"Quill had an API triggered text change.");
         return false;
     }
     return true;
