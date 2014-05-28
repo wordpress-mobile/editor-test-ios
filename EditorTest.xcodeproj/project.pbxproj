@@ -44,6 +44,10 @@
 		74A918FA192AB090006F60AB /* WPQNativeQuillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A918F9192AB090006F60AB /* WPQNativeQuillViewController.m */; };
 		74D46F5D192D40D20033552E /* WPQUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D46F5C192D40D20033552E /* WPQUtilities.m */; };
 		74D46F88192D49EA0033552E /* tinymce_native_index.html in Resources */ = {isa = PBXBuildFile; fileRef = 74D46F74192D49EA0033552E /* tinymce_native_index.html */; };
+		74DB8BB31936883C00A4EE23 /* bower.json in Resources */ = {isa = PBXBuildFile; fileRef = 74DB8BB01936883C00A4EE23 /* bower.json */; };
+		74DB8BB51936883C00A4EE23 /* scribe_native_index.html in Resources */ = {isa = PBXBuildFile; fileRef = 74DB8BB21936883C00A4EE23 /* scribe_native_index.html */; };
+		74DB8BB71936884700A4EE23 /* bower_components in Resources */ = {isa = PBXBuildFile; fileRef = 74DB8BB61936884700A4EE23 /* bower_components */; };
+		74DB8BB81936887600A4EE23 /* scribe_example.js in Resources */ = {isa = PBXBuildFile; fileRef = 74DB8BB11936883C00A4EE23 /* scribe_example.js */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,10 @@
 		74D46F5B192D40D20033552E /* WPQUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPQUtilities.h; sourceTree = "<group>"; };
 		74D46F5C192D40D20033552E /* WPQUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQUtilities.m; sourceTree = "<group>"; };
 		74D46F74192D49EA0033552E /* tinymce_native_index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = tinymce_native_index.html; sourceTree = "<group>"; };
+		74DB8BB01936883C00A4EE23 /* bower.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bower.json; sourceTree = "<group>"; };
+		74DB8BB11936883C00A4EE23 /* scribe_example.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = scribe_example.js; sourceTree = "<group>"; };
+		74DB8BB21936883C00A4EE23 /* scribe_native_index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = scribe_native_index.html; sourceTree = "<group>"; };
+		74DB8BB61936884700A4EE23 /* bower_components */ = {isa = PBXFileReference; lastKnownFileType = folder; path = bower_components; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +187,7 @@
 				74834B51192BA3420084A1F1 /* Content */,
 				7401C3D1192D2AB200A8FF5F /* TinyMCE */,
 				74834B52192BA4570084A1F1 /* Quill */,
+				74DB8BAE1936881D00A4EE23 /* Scribe */,
 				74834B59192BA7370084A1F1 /* Categories */,
 				746B2A281925699C0026C671 /* WPQViewController.h */,
 				746B2A291925699C0026C671 /* WPQViewController.m */,
@@ -281,6 +290,25 @@
 			name = HTML;
 			sourceTree = "<group>";
 		};
+		74DB8BAE1936881D00A4EE23 /* Scribe */ = {
+			isa = PBXGroup;
+			children = (
+				74DB8BAF1936882D00A4EE23 /* HTML */,
+			);
+			name = Scribe;
+			sourceTree = "<group>";
+		};
+		74DB8BAF1936882D00A4EE23 /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				74DB8BB21936883C00A4EE23 /* scribe_native_index.html */,
+				74DB8BB11936883C00A4EE23 /* scribe_example.js */,
+				74DB8BB01936883C00A4EE23 /* bower.json */,
+				74DB8BB61936884700A4EE23 /* bower_components */,
+			);
+			name = HTML;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -358,15 +386,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74DB8BB81936887600A4EE23 /* scribe_example.js in Resources */,
+				74DB8BB51936883C00A4EE23 /* scribe_native_index.html in Resources */,
 				746B2A4D19256A0D0026C671 /* quill_native_index.html in Resources */,
 				74D46F88192D49EA0033552E /* tinymce_native_index.html in Resources */,
 				746B2A4A19256A010026C671 /* quill.js in Resources */,
 				74103D75192A916C009E04F4 /* content.html in Resources */,
+				74DB8BB31936883C00A4EE23 /* bower.json in Resources */,
 				74834B50192B9FF20084A1F1 /* content_short.html in Resources */,
 				746B2A4B19256A010026C671 /* quill.min.js in Resources */,
 				746B2A4F19256A4C0026C671 /* style.css in Resources */,
 				746B2A271925699C0026C671 /* Main_iPad.storyboard in Resources */,
 				74834B4F192B9FF20084A1F1 /* content_long.html in Resources */,
+				74DB8BB71936884700A4EE23 /* bower_components in Resources */,
 				7440DF43192D4FA400855CA8 /* tinymce_style.css in Resources */,
 				7405017A192F9E4300525506 /* tinymce in Resources */,
 				746B2A2C1925699C0026C671 /* Images.xcassets in Resources */,
