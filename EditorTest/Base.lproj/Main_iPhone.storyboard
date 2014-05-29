@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yx6-x8-eEq">
-                                <rect key="frame" x="91" y="94" width="138" height="36"/>
+                                <rect key="frame" x="138" y="89" width="44" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Quill + Native UI">
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Quill">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -28,9 +28,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3K-Ey-xPT">
-                                <rect key="frame" x="121" y="138" width="78" height="36"/>
+                                <rect key="frame" x="113" y="138" width="94" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="TinyMCE">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -38,10 +38,21 @@
                                     <segue destination="EER-ms-Cf4" kind="push" id="HLs-gn-XPM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gx-bm-mcZ">
+                                <rect key="frame" x="127" y="187" width="66" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="Scribe">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="V6L-ZY-oqp" kind="push" id="M1F-UH-Hzw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Yx6-x8-eEq" firstAttribute="top" secondItem="oQM-xt-OPD" secondAttribute="bottom" constant="30" id="BJA-wu-iP6"/>
+                            <constraint firstItem="Yx6-x8-eEq" firstAttribute="top" secondItem="oQM-xt-OPD" secondAttribute="bottom" constant="25" id="BJA-wu-iP6"/>
                             <constraint firstItem="u3K-Ey-xPT" firstAttribute="centerX" secondItem="Yx6-x8-eEq" secondAttribute="centerX" id="liL-4a-rUG"/>
                             <constraint firstItem="u3K-Ey-xPT" firstAttribute="top" secondItem="Yx6-x8-eEq" secondAttribute="bottom" constant="8" symbolic="YES" id="ss0-9i-nxu"/>
                             <constraint firstItem="Yx6-x8-eEq" firstAttribute="centerX" secondItem="xVf-IJ-NeI" secondAttribute="centerX" id="zNQ-Xc-fyH"/>
@@ -136,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="-732"/>
+            <point key="canvasLocation" x="1186" y="-1165"/>
         </scene>
         <!--TinyMCE View Controller - TinyMCE-->
         <scene sceneID="D3e-dJ-9F8">
@@ -221,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cCw-EV-PiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1172" y="-60"/>
+            <point key="canvasLocation" x="1186" y="-466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ha2-Id-9fS">
@@ -240,6 +251,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b1a-i1-L1J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="102" y="-466"/>
+        </scene>
+        <!--Scribe View Controller - Scribe-->
+        <scene sceneID="xcc-Pe-fAV">
+            <objects>
+                <viewController id="V6L-ZY-oqp" customClass="WPQScribeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HfG-DZ-cRI"/>
+                        <viewControllerLayoutGuide type="bottom" id="nhh-KW-plk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="grm-b5-ZsO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gj-TN-r5H">
+                                <rect key="frame" x="20" y="523" width="42" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="qRC-Rf-zSt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Short">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressShortContent:" destination="V6L-ZY-oqp" eventType="touchUpInside" id="JdJ-IA-JUi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMB-CE-syE">
+                                <rect key="frame" x="262" y="522" width="38" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="dfG-le-wBS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Long">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressLongContent:" destination="V6L-ZY-oqp" eventType="touchUpInside" id="pRs-hr-8XV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6I-vb-lIF">
+                                <rect key="frame" x="129" y="523" width="62" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Medium">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressMediumContent:" destination="V6L-ZY-oqp" eventType="touchUpInside" id="Kfm-jq-Rys"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-G2-4x9">
+                                <rect key="frame" x="0.0" y="64" width="320" height="450"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3Gj-TN-r5H" firstAttribute="bottom" secondItem="t6I-vb-lIF" secondAttribute="bottom" id="5sU-nz-TcB"/>
+                            <constraint firstAttribute="trailing" secondItem="PMB-CE-syE" secondAttribute="trailing" constant="20" symbolic="YES" id="8kR-rL-cI2"/>
+                            <constraint firstItem="t6I-vb-lIF" firstAttribute="baseline" secondItem="3Gj-TN-r5H" secondAttribute="baseline" id="EfN-fh-L2w"/>
+                            <constraint firstItem="3Gj-TN-r5H" firstAttribute="top" secondItem="t6I-vb-lIF" secondAttribute="top" id="FNB-hj-YN8"/>
+                            <constraint firstItem="Sdf-G2-4x9" firstAttribute="top" secondItem="HfG-DZ-cRI" secondAttribute="bottom" id="IQR-l3-s5n"/>
+                            <constraint firstItem="PMB-CE-syE" firstAttribute="bottom" secondItem="t6I-vb-lIF" secondAttribute="bottom" id="J0L-hZ-1p3"/>
+                            <constraint firstItem="nhh-KW-plk" firstAttribute="top" secondItem="3Gj-TN-r5H" secondAttribute="bottom" constant="13" id="R1W-rs-nr2"/>
+                            <constraint firstAttribute="trailing" secondItem="Sdf-G2-4x9" secondAttribute="trailing" id="S4X-bj-cTs"/>
+                            <constraint firstItem="Sdf-G2-4x9" firstAttribute="leading" secondItem="grm-b5-ZsO" secondAttribute="leading" id="dvu-pO-grd"/>
+                            <constraint firstItem="t6I-vb-lIF" firstAttribute="leading" secondItem="3Gj-TN-r5H" secondAttribute="trailing" constant="67" id="fGx-qs-9cQ"/>
+                            <constraint firstItem="PMB-CE-syE" firstAttribute="top" secondItem="Sdf-G2-4x9" secondAttribute="bottom" constant="8" symbolic="YES" id="mPY-pE-Qca"/>
+                            <constraint firstItem="PMB-CE-syE" firstAttribute="leading" secondItem="t6I-vb-lIF" secondAttribute="trailing" constant="71" id="qFE-31-Q1n"/>
+                            <constraint firstItem="t6I-vb-lIF" firstAttribute="centerX" secondItem="Sdf-G2-4x9" secondAttribute="centerX" id="qcr-ID-CpV"/>
+                            <constraint firstItem="t6I-vb-lIF" firstAttribute="baseline" secondItem="PMB-CE-syE" secondAttribute="baseline" id="qfk-de-Eki"/>
+                            <constraint firstItem="3Gj-TN-r5H" firstAttribute="leading" secondItem="grm-b5-ZsO" secondAttribute="leading" constant="20" symbolic="YES" id="vZY-c4-KpJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scribe" id="Ixb-mp-Lqt"/>
+                    <connections>
+                        <outlet property="webView" destination="Sdf-G2-4x9" id="rh4-ML-xJG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JKu-UZ-ODW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1186" y="219"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
