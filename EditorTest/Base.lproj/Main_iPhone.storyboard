@@ -49,6 +49,17 @@
                                     <segue destination="V6L-ZY-oqp" kind="push" id="M1F-UH-Hzw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tdx-FN-QoI">
+                                <rect key="frame" x="64" y="236" width="193" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="ZSSRichTextEditor">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BOF-KC-j1S" kind="push" id="uWr-9k-3NI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -336,6 +347,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JKu-UZ-ODW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1186" y="219"/>
+        </scene>
+        <!--View Controller - ZSS-->
+        <scene sceneID="sDS-lj-Paf">
+            <objects>
+                <viewController id="BOF-KC-j1S" customClass="WPQZSSViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JpC-KY-OH4"/>
+                        <viewControllerLayoutGuide type="bottom" id="oWi-CT-U4F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EAg-lZ-XGg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ZSS" id="8QP-it-Xua"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyW-qK-QKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="225"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
