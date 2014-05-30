@@ -71,6 +71,17 @@
                                     <segue destination="IoG-ic-r93" kind="push" id="iUH-2G-XDV"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDc-G9-mjV">
+                                <rect key="frame" x="83" y="334" width="155" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="P2MSTextView">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="y8h-FE-WGr" kind="push" id="hkt-6o-aBG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -531,6 +542,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEW-ug-Lsz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1648" y="-106"/>
+        </scene>
+        <!--Text View Example View Controller - P2MSTextView-->
+        <scene sceneID="G7f-YE-h1Z">
+            <objects>
+                <viewController id="y8h-FE-WGr" customClass="P2MSTextViewExampleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pvk-aR-KBw"/>
+                        <viewControllerLayoutGuide type="bottom" id="m16-pz-lYD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Jp-vG-p3r">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NWB-xt-Rse">
+                                <rect key="frame" x="0.0" y="516" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BHx-hY-rPH">
+                                        <rect key="frame" x="20" y="9" width="42" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="JlU-j6-dtE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Short">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressShortContent:" destination="y8h-FE-WGr" eventType="touchUpInside" id="Olx-Go-tZR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KQC-St-LgN">
+                                        <rect key="frame" x="262" y="8" width="38" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="qau-mF-8Jp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Long">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressLongContent:" destination="y8h-FE-WGr" eventType="touchUpInside" id="OMA-Th-iy6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mox-FV-DeK">
+                                        <rect key="frame" x="129" y="9" width="62" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="6lV-bU-LA7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Medium">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressMediumContent:" destination="y8h-FE-WGr" eventType="touchUpInside" id="oWM-rO-dLI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="KQC-St-LgN" firstAttribute="leading" secondItem="mox-FV-DeK" secondAttribute="trailing" constant="71" id="0Ad-o3-Amq"/>
+                                    <constraint firstItem="BHx-hY-rPH" firstAttribute="top" secondItem="mox-FV-DeK" secondAttribute="top" id="3I7-k7-uNg"/>
+                                    <constraint firstItem="mox-FV-DeK" firstAttribute="bottom" secondItem="KQC-St-LgN" secondAttribute="bottom" id="9Ee-1G-xIt"/>
+                                    <constraint firstItem="mox-FV-DeK" firstAttribute="centerX" secondItem="NWB-xt-Rse" secondAttribute="centerX" id="BQp-LQ-3my"/>
+                                    <constraint firstItem="mox-FV-DeK" firstAttribute="leading" secondItem="BHx-hY-rPH" secondAttribute="trailing" constant="67" id="BuX-K4-ZdY"/>
+                                    <constraint firstAttribute="trailing" secondItem="KQC-St-LgN" secondAttribute="trailing" constant="20" symbolic="YES" id="Jay-Af-fp2"/>
+                                    <constraint firstItem="mox-FV-DeK" firstAttribute="baseline" secondItem="BHx-hY-rPH" secondAttribute="baseline" id="KGn-np-Y7f"/>
+                                    <constraint firstItem="KQC-St-LgN" firstAttribute="baseline" secondItem="mox-FV-DeK" secondAttribute="baseline" id="LJo-ql-BCY"/>
+                                    <constraint firstItem="KQC-St-LgN" firstAttribute="top" secondItem="NWB-xt-Rse" secondAttribute="top" constant="8" id="Xg3-FB-1vP"/>
+                                    <constraint firstAttribute="bottom" secondItem="BHx-hY-rPH" secondAttribute="bottom" constant="11" id="YaJ-0e-9ay"/>
+                                    <constraint firstItem="BHx-hY-rPH" firstAttribute="bottom" secondItem="mox-FV-DeK" secondAttribute="bottom" id="wzx-Uz-ZAh"/>
+                                    <constraint firstItem="BHx-hY-rPH" firstAttribute="leading" secondItem="NWB-xt-Rse" secondAttribute="leading" constant="20" symbolic="YES" id="zNw-Wl-MFI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="NWB-xt-Rse" secondAttribute="bottom" id="DZf-FF-L7S"/>
+                            <constraint firstItem="NWB-xt-Rse" firstAttribute="leading" secondItem="8Jp-vG-p3r" secondAttribute="leading" id="EYn-7y-uZR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="P2MSTextView" id="TML-9l-uYX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bn-Bd-AFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1628" y="-775"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
