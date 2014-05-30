@@ -131,6 +131,8 @@
 		74A48AAB1937807B00DA19E3 /* WPQScribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A48AAA1937807B00DA19E3 /* WPQScribeViewController.m */; };
 		74A71E2B1937853500A01DE5 /* scribe_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 74A71E2A1937853500A01DE5 /* scribe_style.css */; };
 		74A918FA192AB090006F60AB /* WPQNativeQuillViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A918F9192AB090006F60AB /* WPQNativeQuillViewController.m */; };
+		74CA36851937E941009205B5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CA36841937E941009205B5 /* QuartzCore.framework */; };
+		74CA36871937E96C009205B5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CA36861937E96C009205B5 /* CoreText.framework */; };
 		74D46F5D192D40D20033552E /* WPQUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D46F5C192D40D20033552E /* WPQUtilities.m */; };
 		74D46F88192D49EA0033552E /* tinymce_native_index.html in Resources */ = {isa = PBXBuildFile; fileRef = 74D46F74192D49EA0033552E /* tinymce_native_index.html */; };
 		74DB8BB31936883C00A4EE23 /* bower.json in Resources */ = {isa = PBXBuildFile; fileRef = 74DB8BB01936883C00A4EE23 /* bower.json */; };
@@ -301,6 +303,8 @@
 		74A71E2A1937853500A01DE5 /* scribe_style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = scribe_style.css; sourceTree = "<group>"; };
 		74A918F8192AB090006F60AB /* WPQNativeQuillViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPQNativeQuillViewController.h; sourceTree = "<group>"; };
 		74A918F9192AB090006F60AB /* WPQNativeQuillViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQNativeQuillViewController.m; sourceTree = "<group>"; };
+		74CA36841937E941009205B5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		74CA36861937E96C009205B5 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		74D46F5B192D40D20033552E /* WPQUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPQUtilities.h; sourceTree = "<group>"; };
 		74D46F5C192D40D20033552E /* WPQUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQUtilities.m; sourceTree = "<group>"; };
 		74D46F74192D49EA0033552E /* tinymce_native_index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = tinymce_native_index.html; sourceTree = "<group>"; };
@@ -315,6 +319,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74CA36871937E96C009205B5 /* CoreText.framework in Frameworks */,
+				74CA36851937E941009205B5 /* QuartzCore.framework in Frameworks */,
 				746B2A131925699C0026C671 /* CoreGraphics.framework in Frameworks */,
 				746B2A151925699C0026C671 /* UIKit.framework in Frameworks */,
 				746B2A111925699C0026C671 /* Foundation.framework in Frameworks */,
@@ -535,6 +541,8 @@
 		746B2A0F1925699C0026C671 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74CA36861937E96C009205B5 /* CoreText.framework */,
+				74CA36841937E941009205B5 /* QuartzCore.framework */,
 				746B2A101925699C0026C671 /* Foundation.framework */,
 				746B2A121925699C0026C671 /* CoreGraphics.framework */,
 				746B2A141925699C0026C671 /* UIKit.framework */,

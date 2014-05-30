@@ -1,14 +1,20 @@
 #import "WPQZSSViewController.h"
 #import "WPQZSSPickerViewController.h"
+#import "WPQUtilities.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface WPQZSSViewController ()
-
+@property (weak, nonatomic) IBOutlet UIView *lowerView;
 @end
 
 @implementation WPQZSSViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [MMStopwatchARC start:@"ZSS Init"];
+    
+    _lowerView.layer.zPosition = MAXFLOAT;
     
     self.title = @"ZSSRichTextEditor";
     
@@ -16,11 +22,10 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Export" style:UIBarButtonItemStylePlain target:self action:@selector(exportHTML)];
 	
     // HTML Content to set in the editor
-    NSString *html = @"<!-- This is an HTML comment -->"
-    "<p>This is a test of the <strong>ZSSRichTextEditor</strong> by <a title=\"Zed Said\" href=\"http://www.zedsaid.com\">Zed Said Studio</a></p>";
+    NSString *html = @"<p>Load some content here!</p>";
     
     // Set the base URL if you would like to use relative links, such as to images.
-    self.baseURL = [NSURL URLWithString:@"http://www.zedsaid.com"];
+    //self.baseURL = [NSURL URLWithString:@"http://www.zedsaid.com"];
     
     // If you want to pretty print HTML within the source view.
     self.formatHTML = YES;
@@ -39,6 +44,37 @@
     
 }
 
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [MMStopwatchARC stop:@"ZSS Init"];
+}
+
+#pragma mark - Actions
+
+- (IBAction)didPressShortContent:(id)sender
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"content_short" ofType:@"html"];
+    NSString *htmlParam = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    //[MMStopwatchARC start:@"ZSS Load"];
+    [self setHtml:htmlParam];
+}
+
+- (IBAction)didPressMediumContent:(id)sender
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"content" ofType:@"html"];
+    NSString *htmlParam = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    //[MMStopwatchARC start:@"ZSS Load"];
+    [self setHtml:htmlParam];
+}
+
+- (IBAction)didPressLongContent:(id)sender
+{
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"content_long" ofType:@"html"];
+    NSString *htmlParam = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+    //[MMStopwatchARC start:@"ZSS Load"];
+    [self setHtml:htmlParam];
+}
+
 - (void)showInsertURLAlternatePicker {
     
     [self dismissAlertView];
@@ -48,7 +84,6 @@
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:picker];
     nav.navigationBar.translucent = NO;
     [self presentViewController:nav animated:YES completion:nil];
-    
 }
 
 
@@ -64,7 +99,6 @@
     [self presentViewController:nav animated:YES completion:nil];
     
 }
-
 
 - (void)exportHTML {
     

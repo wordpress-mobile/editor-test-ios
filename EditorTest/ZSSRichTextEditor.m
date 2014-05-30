@@ -98,11 +98,12 @@ static Class hackishFixClass = Nil;
 @end
 
 @interface ZSSRichTextEditor ()
+
 @property (nonatomic, strong) UIScrollView *toolBarScroll;
 @property (nonatomic, strong) UIToolbar *toolbar;
 @property (nonatomic, strong) UIView *toolbarHolder;
 @property (nonatomic, strong) NSString *htmlString;
-@property (nonatomic, strong)  UIWebView *editorView;
+@property (nonatomic, strong) UIWebView *editorView;
 @property (nonatomic, strong) ZSSTextView *sourceView;
 @property (nonatomic) CGRect editorViewFrame;
 @property (nonatomic) BOOL resourcesLoaded;
@@ -125,7 +126,7 @@ static Class hackishFixClass = Nil;
     [super viewDidLoad];
     
     // Source View
-    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    CGRect frame = CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height-88);
     self.sourceView = [[ZSSTextView alloc] initWithFrame:frame];
     self.sourceView.hidden = YES;
     self.sourceView.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -137,7 +138,7 @@ static Class hackishFixClass = Nil;
     [self.view addSubview:self.sourceView];
     
     // Editor View
-    CGRect frame2 = CGRectMake(0, 40, self.view.frame.size.width, self.view.frame.size.height);
+    CGRect frame2 = CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height-88);
     self.editorView = [[UIWebView alloc] initWithFrame:frame2];
     self.editorView.delegate = self;
     self.editorView.hidesInputAccessoryView = YES;

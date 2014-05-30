@@ -359,13 +359,85 @@
                     <view key="view" contentMode="scaleToFill" id="EAg-lZ-XGg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZB6-tp-3Ec">
+                                <rect key="frame" x="0.0" y="516" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCI-ew-bQF">
+                                        <rect key="frame" x="20" y="9" width="42" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="Tak-Cj-pYc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Short">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressShortContent:" destination="BOF-KC-j1S" eventType="touchUpInside" id="bCc-Wm-lUm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwt-SA-PQD">
+                                        <rect key="frame" x="262" y="8" width="38" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="6zI-Yo-MwV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Long">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressLongContent:" destination="BOF-KC-j1S" eventType="touchUpInside" id="IMt-sQ-3Ks"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2p-1J-ojW">
+                                        <rect key="frame" x="129" y="9" width="62" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="pQO-ba-9z4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Medium">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressMediumContent:" destination="BOF-KC-j1S" eventType="touchUpInside" id="GVf-kQ-9pJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="uwt-SA-PQD" firstAttribute="top" secondItem="ZB6-tp-3Ec" secondAttribute="top" constant="8" id="Hgr-bz-q8h"/>
+                                    <constraint firstItem="fCI-ew-bQF" firstAttribute="top" secondItem="d2p-1J-ojW" secondAttribute="top" id="JWU-JT-UJI"/>
+                                    <constraint firstItem="uwt-SA-PQD" firstAttribute="baseline" secondItem="d2p-1J-ojW" secondAttribute="baseline" id="QHS-an-xAw"/>
+                                    <constraint firstItem="d2p-1J-ojW" firstAttribute="leading" secondItem="fCI-ew-bQF" secondAttribute="trailing" constant="67" id="Sef-Jh-MMN"/>
+                                    <constraint firstItem="fCI-ew-bQF" firstAttribute="bottom" secondItem="d2p-1J-ojW" secondAttribute="bottom" id="YO1-gz-7Go"/>
+                                    <constraint firstItem="d2p-1J-ojW" firstAttribute="centerX" secondItem="ZB6-tp-3Ec" secondAttribute="centerX" id="bnn-9j-0no"/>
+                                    <constraint firstAttribute="trailing" secondItem="uwt-SA-PQD" secondAttribute="trailing" constant="20" symbolic="YES" id="hnP-pe-tjw"/>
+                                    <constraint firstAttribute="bottom" secondItem="fCI-ew-bQF" secondAttribute="bottom" constant="11" id="ldG-fw-H9M"/>
+                                    <constraint firstItem="d2p-1J-ojW" firstAttribute="bottom" secondItem="uwt-SA-PQD" secondAttribute="bottom" id="o3X-ev-nsD"/>
+                                    <constraint firstItem="fCI-ew-bQF" firstAttribute="leading" secondItem="ZB6-tp-3Ec" secondAttribute="leading" constant="20" symbolic="YES" id="qUU-Yd-URX"/>
+                                    <constraint firstItem="d2p-1J-ojW" firstAttribute="baseline" secondItem="fCI-ew-bQF" secondAttribute="baseline" id="tLl-qH-2VI"/>
+                                    <constraint firstItem="uwt-SA-PQD" firstAttribute="leading" secondItem="d2p-1J-ojW" secondAttribute="trailing" constant="71" id="xMg-ip-Ca1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZB6-tp-3Ec" secondAttribute="bottom" id="KM9-9h-reE"/>
+                            <constraint firstItem="ZB6-tp-3Ec" firstAttribute="leading" secondItem="EAg-lZ-XGg" secondAttribute="leading" id="mAM-GQ-YNg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ZSS" id="8QP-it-Xua"/>
+                    <connections>
+                        <outlet property="lowerView" destination="ZB6-tp-3Ec" id="6FO-cI-B3Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyW-qK-QKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="225"/>
+            <point key="canvasLocation" x="636" y="246"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
