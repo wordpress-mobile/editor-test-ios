@@ -104,6 +104,24 @@
 		74423F061937CB3C005840E4 /* ZSSRichTextEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 74423F051937CB3C005840E4 /* ZSSRichTextEditor.m */; };
 		74423F0A1937CBB6005840E4 /* WPQZSSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74423F091937CBB6005840E4 /* WPQZSSViewController.m */; };
 		74423F0D1937CDBD005840E4 /* WPQZSSPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74423F0C1937CDBD005840E4 /* WPQZSSPickerViewController.m */; };
+		745025D51938DCA9007A9CE4 /* DTRichTextEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745025D21938DCA9007A9CE4 /* DTRichTextEditor.framework */; };
+		745025D61938DCA9007A9CE4 /* DTLoupe.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 745025D41938DCA9007A9CE4 /* DTLoupe.bundle */; };
+		745025EA1938E049007A9CE4 /* DTFormatFontFamilyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745025DB1938E049007A9CE4 /* DTFormatFontFamilyTableViewController.m */; };
+		745025EB1938E049007A9CE4 /* DTFormatOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745025DD1938E049007A9CE4 /* DTFormatOverviewViewController.m */; };
+		745025EC1938E049007A9CE4 /* DTFormatTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 745025DF1938E049007A9CE4 /* DTFormatTableView.m */; };
+		745025ED1938E049007A9CE4 /* DTFormatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745025E11938E049007A9CE4 /* DTFormatViewController.m */; };
+		745025EE1938E049007A9CE4 /* DTRichTextEditorAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 745025E31938E049007A9CE4 /* DTRichTextEditorAppDelegate.m */; };
+		745025EF1938E049007A9CE4 /* DTRichTextEditorTestState.m in Sources */ = {isa = PBXBuildFile; fileRef = 745025E51938E049007A9CE4 /* DTRichTextEditorTestState.m */; };
+		745025F01938E049007A9CE4 /* DTRichTextEditorTestStateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745025E71938E049007A9CE4 /* DTRichTextEditorTestStateController.m */; };
+		745025F11938E049007A9CE4 /* DTRichTextEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 745025E91938E049007A9CE4 /* DTRichTextEditorViewController.m */; };
+		745025F71938E096007A9CE4 /* icon_smile.gif in Resources */ = {isa = PBXBuildFile; fileRef = 745025F31938E096007A9CE4 /* icon_smile.gif */; };
+		745025F81938E096007A9CE4 /* 43-film-roll.png in Resources */ = {isa = PBXBuildFile; fileRef = 745025F41938E096007A9CE4 /* 43-film-roll.png */; };
+		745025F91938E096007A9CE4 /* 43-film-roll@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 745025F51938E096007A9CE4 /* 43-film-roll@2x.png */; };
+		745025FA1938E096007A9CE4 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 745025F61938E096007A9CE4 /* test.html */; };
+		745025FC1938E0CA007A9CE4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745025FB1938E0CA007A9CE4 /* AssetsLibrary.framework */; };
+		745025FE1938E0DF007A9CE4 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745025FD1938E0DF007A9CE4 /* ImageIO.framework */; };
+		745026001938E0E5007A9CE4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 745025FF1938E0E5007A9CE4 /* MediaPlayer.framework */; };
+		745026021938E1AE007A9CE4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 745026011938E1AE007A9CE4 /* libxml2.dylib */; };
 		746B2A111925699C0026C671 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746B2A101925699C0026C671 /* Foundation.framework */; };
 		746B2A131925699C0026C671 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746B2A121925699C0026C671 /* CoreGraphics.framework */; };
 		746B2A151925699C0026C671 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746B2A141925699C0026C671 /* UIKit.framework */; };
@@ -266,6 +284,32 @@
 		74423F091937CBB6005840E4 /* WPQZSSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQZSSViewController.m; sourceTree = "<group>"; };
 		74423F0B1937CDBD005840E4 /* WPQZSSPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPQZSSPickerViewController.h; sourceTree = "<group>"; };
 		74423F0C1937CDBD005840E4 /* WPQZSSPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPQZSSPickerViewController.m; sourceTree = "<group>"; };
+		745025D21938DCA9007A9CE4 /* DTRichTextEditor.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DTRichTextEditor.framework; sourceTree = "<group>"; };
+		745025D41938DCA9007A9CE4 /* DTLoupe.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DTLoupe.bundle; sourceTree = "<group>"; };
+		745025DA1938E049007A9CE4 /* DTFormatFontFamilyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFormatFontFamilyTableViewController.h; sourceTree = "<group>"; };
+		745025DB1938E049007A9CE4 /* DTFormatFontFamilyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFormatFontFamilyTableViewController.m; sourceTree = "<group>"; };
+		745025DC1938E049007A9CE4 /* DTFormatOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFormatOverviewViewController.h; sourceTree = "<group>"; };
+		745025DD1938E049007A9CE4 /* DTFormatOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFormatOverviewViewController.m; sourceTree = "<group>"; };
+		745025DE1938E049007A9CE4 /* DTFormatTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFormatTableView.h; sourceTree = "<group>"; };
+		745025DF1938E049007A9CE4 /* DTFormatTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFormatTableView.m; sourceTree = "<group>"; };
+		745025E01938E049007A9CE4 /* DTFormatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTFormatViewController.h; sourceTree = "<group>"; };
+		745025E11938E049007A9CE4 /* DTFormatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTFormatViewController.m; sourceTree = "<group>"; };
+		745025E21938E049007A9CE4 /* DTRichTextEditorAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorAppDelegate.h; sourceTree = "<group>"; };
+		745025E31938E049007A9CE4 /* DTRichTextEditorAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorAppDelegate.m; sourceTree = "<group>"; };
+		745025E41938E049007A9CE4 /* DTRichTextEditorTestState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorTestState.h; sourceTree = "<group>"; };
+		745025E51938E049007A9CE4 /* DTRichTextEditorTestState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorTestState.m; sourceTree = "<group>"; };
+		745025E61938E049007A9CE4 /* DTRichTextEditorTestStateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorTestStateController.h; sourceTree = "<group>"; };
+		745025E71938E049007A9CE4 /* DTRichTextEditorTestStateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorTestStateController.m; sourceTree = "<group>"; };
+		745025E81938E049007A9CE4 /* DTRichTextEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DTRichTextEditorViewController.h; sourceTree = "<group>"; };
+		745025E91938E049007A9CE4 /* DTRichTextEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DTRichTextEditorViewController.m; sourceTree = "<group>"; };
+		745025F31938E096007A9CE4 /* icon_smile.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = icon_smile.gif; sourceTree = "<group>"; };
+		745025F41938E096007A9CE4 /* 43-film-roll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "43-film-roll.png"; sourceTree = "<group>"; };
+		745025F51938E096007A9CE4 /* 43-film-roll@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "43-film-roll@2x.png"; sourceTree = "<group>"; };
+		745025F61938E096007A9CE4 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		745025FB1938E0CA007A9CE4 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		745025FD1938E0DF007A9CE4 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		745025FF1938E0E5007A9CE4 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		745026011938E1AE007A9CE4 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		746B2A0D1925699C0026C671 /* EditorTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EditorTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		746B2A101925699C0026C671 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		746B2A121925699C0026C671 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -319,8 +363,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				745026021938E1AE007A9CE4 /* libxml2.dylib in Frameworks */,
+				745026001938E0E5007A9CE4 /* MediaPlayer.framework in Frameworks */,
+				745025FE1938E0DF007A9CE4 /* ImageIO.framework in Frameworks */,
+				745025FC1938E0CA007A9CE4 /* AssetsLibrary.framework in Frameworks */,
 				74CA36871937E96C009205B5 /* CoreText.framework in Frameworks */,
 				74CA36851937E941009205B5 /* QuartzCore.framework in Frameworks */,
+				745025D51938DCA9007A9CE4 /* DTRichTextEditor.framework in Frameworks */,
 				746B2A131925699C0026C671 /* CoreGraphics.framework in Frameworks */,
 				746B2A151925699C0026C671 /* UIKit.framework in Frameworks */,
 				746B2A111925699C0026C671 /* Foundation.framework in Frameworks */,
@@ -511,12 +560,66 @@
 		74423F071937CB8B005840E4 /* Editors */ = {
 			isa = PBXGroup;
 			children = (
+				745025C41938D561007A9CE4 /* DTRichTextEditor */,
 				7401C3D1192D2AB200A8FF5F /* TinyMCE */,
 				74834B52192BA4570084A1F1 /* Quill */,
 				74DB8BAE1936881D00A4EE23 /* Scribe */,
 				74423E471937C967005840E4 /* ZSSTextEditor */,
 			);
 			name = Editors;
+			sourceTree = "<group>";
+		};
+		745025C41938D561007A9CE4 /* DTRichTextEditor */ = {
+			isa = PBXGroup;
+			children = (
+				745025E81938E049007A9CE4 /* DTRichTextEditorViewController.h */,
+				745025E91938E049007A9CE4 /* DTRichTextEditorViewController.m */,
+				745025F21938E085007A9CE4 /* Resources */,
+				745025DA1938E049007A9CE4 /* DTFormatFontFamilyTableViewController.h */,
+				745025DB1938E049007A9CE4 /* DTFormatFontFamilyTableViewController.m */,
+				745025DC1938E049007A9CE4 /* DTFormatOverviewViewController.h */,
+				745025DD1938E049007A9CE4 /* DTFormatOverviewViewController.m */,
+				745025DE1938E049007A9CE4 /* DTFormatTableView.h */,
+				745025DF1938E049007A9CE4 /* DTFormatTableView.m */,
+				745025E01938E049007A9CE4 /* DTFormatViewController.h */,
+				745025E11938E049007A9CE4 /* DTFormatViewController.m */,
+				745025E21938E049007A9CE4 /* DTRichTextEditorAppDelegate.h */,
+				745025E31938E049007A9CE4 /* DTRichTextEditorAppDelegate.m */,
+				745025E41938E049007A9CE4 /* DTRichTextEditorTestState.h */,
+				745025E51938E049007A9CE4 /* DTRichTextEditorTestState.m */,
+				745025E61938E049007A9CE4 /* DTRichTextEditorTestStateController.h */,
+				745025E71938E049007A9CE4 /* DTRichTextEditorTestStateController.m */,
+				745025D11938DCA9007A9CE4 /* DTRichTextEditor.embeddedframework */,
+			);
+			name = DTRichTextEditor;
+			sourceTree = "<group>";
+		};
+		745025D11938DCA9007A9CE4 /* DTRichTextEditor.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				745025D21938DCA9007A9CE4 /* DTRichTextEditor.framework */,
+				745025D31938DCA9007A9CE4 /* Resources */,
+			);
+			path = DTRichTextEditor.embeddedframework;
+			sourceTree = "<group>";
+		};
+		745025D31938DCA9007A9CE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				745025D41938DCA9007A9CE4 /* DTLoupe.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		745025F21938E085007A9CE4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				745025F31938E096007A9CE4 /* icon_smile.gif */,
+				745025F41938E096007A9CE4 /* 43-film-roll.png */,
+				745025F51938E096007A9CE4 /* 43-film-roll@2x.png */,
+				745025F61938E096007A9CE4 /* test.html */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		746B2A041925699B0026C671 = {
@@ -541,6 +644,10 @@
 		746B2A0F1925699C0026C671 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				745026011938E1AE007A9CE4 /* libxml2.dylib */,
+				745025FF1938E0E5007A9CE4 /* MediaPlayer.framework */,
+				745025FD1938E0DF007A9CE4 /* ImageIO.framework */,
+				745025FB1938E0CA007A9CE4 /* AssetsLibrary.framework */,
 				74CA36861937E96C009205B5 /* CoreText.framework */,
 				74CA36841937E941009205B5 /* QuartzCore.framework */,
 				746B2A101925699C0026C671 /* Foundation.framework */,
@@ -760,6 +867,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74423EE51937CAB9005840E4 /* ZSSredo.png in Resources */,
+				745025F81938E096007A9CE4 /* 43-film-roll.png in Resources */,
 				74423EFC1937CAB9005840E4 /* ZSSviewsource@2x.png in Resources */,
 				74423EF61937CAB9005840E4 /* ZSSundo@2x.png in Resources */,
 				74423EE61937CAB9005840E4 /* ZSSredo@2x.png in Resources */,
@@ -792,14 +900,17 @@
 				746B2A4A19256A010026C671 /* quill.js in Resources */,
 				74423EBD1937CAB9005840E4 /* ZSSclearstyle.png in Resources */,
 				74423EFA1937CAB9005840E4 /* ZSSunorderedlist@2x.png in Resources */,
+				745025F91938E096007A9CE4 /* 43-film-roll@2x.png in Resources */,
 				74423EF31937CAB9005840E4 /* ZSSunderline.png in Resources */,
 				74103D75192A916C009E04F4 /* content.html in Resources */,
 				74423EE01937CAB9005840E4 /* ZSSparagraph@2x.png in Resources */,
 				74423EEC1937CAB9005840E4 /* ZSSsubscript@2x.png in Resources */,
 				74423EDB1937CAB9005840E4 /* ZSSorderedlist.png in Resources */,
+				745025F71938E096007A9CE4 /* icon_smile.gif in Resources */,
 				74DB8BB31936883C00A4EE23 /* bower.json in Resources */,
 				74423ECB1937CAB9005840E4 /* ZSSh6.png in Resources */,
 				74423EB71937CAB9005840E4 /* ZSSbgcolor.png in Resources */,
+				745025FA1938E096007A9CE4 /* test.html in Resources */,
 				74423EED1937CAB9005840E4 /* ZSSsuperscript.png in Resources */,
 				74423EDE1937CAB9005840E4 /* ZSSoutdent@2x.png in Resources */,
 				74423ECA1937CAB9005840E4 /* ZSSh5@2x.png in Resources */,
@@ -818,6 +929,7 @@
 				74423ECC1937CAB9005840E4 /* ZSSh6@2x.png in Resources */,
 				74423EF41937CAB9005840E4 /* ZSSunderline@2x.png in Resources */,
 				74423EC01937CAB9005840E4 /* ZSSforcejustify@2x.png in Resources */,
+				745025D61938DCA9007A9CE4 /* DTLoupe.bundle in Resources */,
 				74423EE81937CAB9005840E4 /* ZSSrightjustify@2x.png in Resources */,
 				74423EEF1937CAB9005840E4 /* ZSStable.png in Resources */,
 				74423ED41937CAB9005840E4 /* ZSSitalic@2x.png in Resources */,
@@ -876,25 +988,33 @@
 				74834B5C192BDE8C0084A1F1 /* MMStopwatchARC.m in Sources */,
 				74423E671937C9AB005840E4 /* HRColorUtil.m in Sources */,
 				74423F031937CB11005840E4 /* ZSSTextView.m in Sources */,
+				745025ED1938E049007A9CE4 /* DTFormatViewController.m in Sources */,
 				74423F0D1937CDBD005840E4 /* WPQZSSPickerViewController.m in Sources */,
 				74834B58192BA6FE0084A1F1 /* GTMNSString+HTML.m in Sources */,
 				74423E611937C9AB005840E4 /* CYRToken.m in Sources */,
+				745025F11938E049007A9CE4 /* DTRichTextEditorViewController.m in Sources */,
 				74423E601937C9AB005840E4 /* CYRTextView.m in Sources */,
 				74834B55192BA6590084A1F1 /* NSString+HTML.m in Sources */,
 				74423E661937C9AB005840E4 /* HRColorPickerViewController.m in Sources */,
 				741367261926A55100AD07DD /* WPKeyboardToolbarButtonItem.m in Sources */,
 				74423F001937CAFF005840E4 /* ZSSBarButtonItem.m in Sources */,
+				745025EA1938E049007A9CE4 /* DTFormatFontFamilyTableViewController.m in Sources */,
+				745025EC1938E049007A9CE4 /* DTFormatTableView.m in Sources */,
 				7413672A1926A92900AD07DD /* WPStyleGuide.m in Sources */,
+				745025EF1938E049007A9CE4 /* DTRichTextEditorTestState.m in Sources */,
 				74423F0A1937CBB6005840E4 /* WPQZSSViewController.m in Sources */,
 				74A918FA192AB090006F60AB /* WPQNativeQuillViewController.m in Sources */,
 				74423E651937C9AB005840E4 /* HRColorPickerView.m in Sources */,
 				74A48AAB1937807B00DA19E3 /* WPQScribeViewController.m in Sources */,
 				74423E631937C9AB005840E4 /* HRCgUtil.m in Sources */,
+				745025EE1938E049007A9CE4 /* DTRichTextEditorAppDelegate.m in Sources */,
 				74423F061937CB3C005840E4 /* ZSSRichTextEditor.m in Sources */,
 				74423E5E1937C9AB005840E4 /* CYRLayoutManager.m in Sources */,
 				74423E621937C9AB005840E4 /* HRBrightnessCursor.m in Sources */,
+				745025F01938E049007A9CE4 /* DTRichTextEditorTestStateController.m in Sources */,
 				74D46F5D192D40D20033552E /* WPQUtilities.m in Sources */,
 				746B2A2A1925699C0026C671 /* WPQViewController.m in Sources */,
+				745025EB1938E049007A9CE4 /* DTFormatOverviewViewController.m in Sources */,
 				746B2A211925699C0026C671 /* WPQAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1036,12 +1156,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+					"$(PROJECT_DIR)/EditorTest/DTRichTextEditor.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EditorTest/EditorTest-Prefix.pch";
 				INFOPLIST_FILE = "EditorTest/EditorTest-Info.plist";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = EditorTest;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1054,11 +1176,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SYSTEM_APPS_DIR)/Reveal.app/Contents/SharedSupport/iOS-Libraries",
+					"$(PROJECT_DIR)/EditorTest/DTRichTextEditor.embeddedframework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EditorTest/EditorTest-Prefix.pch";
 				INFOPLIST_FILE = "EditorTest/EditorTest-Info.plist";
 				PRODUCT_NAME = EditorTest;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -17,6 +17,11 @@
     #import "WPStyleGuide.h"
     #import "MMStopwatchARC.h"
 
+    #import <AssetsLibrary/AssetsLibrary.h>
+    #import <QuartzCore/QuartzCore.h>
+    #import <DTRichTextEditor/DTRichTextEditor.h>
+    #import <DTRichTextEditor/DTCoreText.h>
+
     #ifndef IS_IPAD
     #define IS_IPAD   ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad)
     #endif

@@ -60,6 +60,17 @@
                                     <segue destination="BOF-KC-j1S" kind="push" id="uWr-9k-3NI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzX-Ir-xGO">
+                                <rect key="frame" x="71" y="285" width="178" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <state key="normal" title="DTRichTextEditor">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IoG-ic-r93" kind="push" id="iUH-2G-XDV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -438,6 +449,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyW-qK-QKm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="636" y="246"/>
+        </scene>
+        <!--Rich Text Editor View Controller - DTRichTextEditor-->
+        <scene sceneID="FOh-4g-8Kh">
+            <objects>
+                <viewController id="IoG-ic-r93" customClass="DTRichTextEditorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kxj-f3-FHW"/>
+                        <viewControllerLayoutGuide type="bottom" id="vTT-oi-FFF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g3P-30-u19">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qDV-IA-nce">
+                                <rect key="frame" x="0.0" y="516" width="320" height="52"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8R-qO-fdR">
+                                        <rect key="frame" x="20" y="9" width="42" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="KrV-VN-Jep"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Short">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vC-6Q-RWv">
+                                        <rect key="frame" x="262" y="8" width="38" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="38" id="FdG-FT-ngL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Long">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9j-N8-rRt">
+                                        <rect key="frame" x="129" y="9" width="62" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="62" id="lEr-RA-Ytn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <state key="normal" title="Medium">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="A8R-qO-fdR" secondAttribute="bottom" constant="11" id="Dd1-vU-ib1"/>
+                                    <constraint firstItem="I9j-N8-rRt" firstAttribute="bottom" secondItem="8vC-6Q-RWv" secondAttribute="bottom" id="M5O-QS-QRB"/>
+                                    <constraint firstItem="I9j-N8-rRt" firstAttribute="leading" secondItem="A8R-qO-fdR" secondAttribute="trailing" constant="67" id="NXS-ql-w0F"/>
+                                    <constraint firstItem="8vC-6Q-RWv" firstAttribute="baseline" secondItem="I9j-N8-rRt" secondAttribute="baseline" id="P2b-OG-5vx"/>
+                                    <constraint firstItem="A8R-qO-fdR" firstAttribute="leading" secondItem="qDV-IA-nce" secondAttribute="leading" constant="20" symbolic="YES" id="Rma-tc-ard"/>
+                                    <constraint firstItem="8vC-6Q-RWv" firstAttribute="leading" secondItem="I9j-N8-rRt" secondAttribute="trailing" constant="71" id="RwX-M9-heg"/>
+                                    <constraint firstItem="8vC-6Q-RWv" firstAttribute="top" secondItem="qDV-IA-nce" secondAttribute="top" constant="8" id="ZN6-UH-9qb"/>
+                                    <constraint firstAttribute="trailing" secondItem="8vC-6Q-RWv" secondAttribute="trailing" constant="20" symbolic="YES" id="bpX-tn-kzI"/>
+                                    <constraint firstItem="I9j-N8-rRt" firstAttribute="centerX" secondItem="qDV-IA-nce" secondAttribute="centerX" id="f4a-Lf-Xfo"/>
+                                    <constraint firstItem="I9j-N8-rRt" firstAttribute="baseline" secondItem="A8R-qO-fdR" secondAttribute="baseline" id="ifx-hZ-Vlv"/>
+                                    <constraint firstItem="A8R-qO-fdR" firstAttribute="bottom" secondItem="I9j-N8-rRt" secondAttribute="bottom" id="kEh-hp-7FJ"/>
+                                    <constraint firstItem="A8R-qO-fdR" firstAttribute="top" secondItem="I9j-N8-rRt" secondAttribute="top" id="oMk-IK-Ouc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qDV-IA-nce" firstAttribute="leading" secondItem="g3P-30-u19" secondAttribute="leading" id="0iX-hv-Cw5"/>
+                            <constraint firstAttribute="bottom" secondItem="qDV-IA-nce" secondAttribute="bottom" id="cya-bV-dae"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="DTRichTextEditor" id="zU9-Jc-T6A"/>
+                    <connections>
+                        <outlet property="lowerView" destination="qDV-IA-nce" id="gk7-oO-q2z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEW-ug-Lsz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1648" y="-106"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
