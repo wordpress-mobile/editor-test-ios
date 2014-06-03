@@ -126,7 +126,7 @@ static Class hackishFixClass = Nil;
     [super viewDidLoad];
     
     // Source View
-    CGRect frame = CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height-88);
+    CGRect frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     self.sourceView = [[ZSSTextView alloc] initWithFrame:frame];
     self.sourceView.hidden = YES;
     self.sourceView.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -138,7 +138,7 @@ static Class hackishFixClass = Nil;
     [self.view addSubview:self.sourceView];
     
     // Editor View
-    CGRect frame2 = CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height-88);
+    CGRect frame2 = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     self.editorView = [[UIWebView alloc] initWithFrame:frame2];
     self.editorView.delegate = self;
     self.editorView.hidesInputAccessoryView = YES;
@@ -198,7 +198,6 @@ static Class hackishFixClass = Nil;
     [self buildToolbar];
 
 }
-
 
 - (void)setEnabledToolbarItems:(ZSSRichTextEditorToolbar)enabledToolbarItems {
     

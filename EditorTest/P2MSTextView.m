@@ -8,8 +8,8 @@
 
 #import "P2MSTextView.h"
 #import <QuartzCore/QuartzCore.h>
-#import <objc/objc-runtime.h> //Sim
-//#import <objc/runtime.h>  //Device
+//#import <objc/objc-runtime.h> //Sim
+#import <objc/runtime.h>  //Device
 #import "P2MSIndexedRange.h"
 #import "P2MSIndexedPosition.h"
 #import "P2MSHTMLNode.h"

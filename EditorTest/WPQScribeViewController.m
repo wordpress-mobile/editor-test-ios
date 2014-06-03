@@ -21,6 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
+    _webView.scrollView.bounces = NO;
     [_webView setDelegate:self];
     [MMStopwatchARC start:@"Scribe Init"];
 	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"scribe_native_index" ofType:@"html"]isDirectory:NO]]];

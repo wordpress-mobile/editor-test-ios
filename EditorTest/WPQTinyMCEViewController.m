@@ -21,6 +21,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
+    _webView.scrollView.bounces = NO;
     [_webView setDelegate:self];
     [MMStopwatchARC start:@"TinyMCE Init"];
 	[_webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"tinymce_native_index" ofType:@"html"]isDirectory:NO]]];

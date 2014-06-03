@@ -22,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.translucent = NO;
     [MMStopwatchARC start:@"P2MSTextView Init"];
     
     textView = [[P2MSTextView alloc]initWithFrame:CGRectMake(0, 10, 320, 400)];
